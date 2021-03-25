@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Racing game snake</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/da6ad3f417.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!--MAIN MENU-->
+    <div class="mainmenu">
+      <div class="btnStart"><i class="fas fa-play"></i> Start Game</div>
+
+      <div class="radioBtn">
+        Choose number of players:
+        <div>
+          <input
+            type="radio"
+            name="choice"
+            value="choice-1"
+            id="choice-1"
+            class="radio"
+            checked
+          />
+          <label for="choice-1">1 Player</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            name="choice"
+            value="choice-2"
+            id="choice-2"
+            class="radio"
+          />
+          <label for="choice-2">2 Players</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            name="choice"
+            value="choice-3"
+            id="choice-3"
+            class="radio"
+          />
+          <label for="choice-3">3 Players</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            name="choice"
+            value="choice-4"
+            id="choice-4"
+            class="radio"
+          />
+          <label for="choice-4">4 Players</label>
+        </div>
+      </div>
+      <div class="controlsBar">
+        <div class="controls">
+          <div></div>
+          <div class="control">↑</div>
+          <div></div>
+          <div class="control">←</div>
+          <div class="control">↓</div>
+          <div class="control">→</div>
+        </div>
+        <div class="controls">
+          <div></div>
+          <div class="control">W</div>
+          <div></div>
+          <div class="control">A</div>
+          <div class="control">S</div>
+          <div class="control">D</div>
+        </div>
+        <div class="controls">
+          <div></div>
+          <div class="control">8</div>
+          <div></div>
+          <div class="control">4</div>
+          <div class="control">5</div>
+          <div class="control">6</div>
+        </div>
+        <div class="controls">
+          <div></div>
+          <div class="control">I</div>
+          <div></div>
+          <div class="control">J</div>
+          <div class="control">K</div>
+          <div class="control">L</div>
+        </div>
+      </div>
+      <div class="btnHighScores"><i class="fas fa-trophy"></i> High Scores</div>
+    </div>
+    <!--GAME PART-->
+    <div class="game">
+      <!--CANVAS WITH GAME-->
+      <canvas width="820" height="820" class="gamePlan"> </canvas>
+      <div class="scoreboard">
+        <div class="playerboard">
+          <p>Player 1</p>
+          <p class="scorePlr">0</p>
+        </div>
+        <div class="playerboard">
+          <p>Player 2</p>
+          <p class="scorePlr">0</p>
+        </div>
+        <div class="playerboard">
+          <p>Player 3</p>
+          <p class="scorePlr">0</p>
+        </div>
+        <div class="playerboard">
+          <p>Player 4</p>
+          <p class="scorePlr">0</p>
+        </div>
+      </div>
+      <div class="manual">
+        <div>
+          <div class="picture picture1"></div>
+          <p>+1</p>
+        </div>
+        <div>
+          <div class="picture picture2"></div>
+          <p>+5</p>
+        </div>
+        <div>
+          <div class="picture picture3"></div>
+          <p><i class="fas fa-skull"></i></p>
+        </div>
+      </div>
+    </div>
+    <!--END GAME - SAVE HIGH SCORE PAGE-->
+    <div class="saveHighScorePage">
+     <div class="end">
+       <p class="winnerText"></p>
+         <p class='finalScore'>0</p>
+         
+        <form class="end-form-container">
+            <p id="end-text">Write Your nick to save score.</p>
+            <input type="text" name='name' id='username' placeholder="Nick...">        
+        </form>
+        <div class="btnSave" id="saveScoreBtn"><i class="far fa-save"></i> Save</div>
+        <div class="btnStart"><i class="fas fa-play"></i> Play again</div>
+        <div class="btnHome"><i class="fas fa-home"></i> Home</div>
+     </div>  
+   </div>
+    <!--HIGH SCORES-->
+    <div class="highScorePage">
+      <div id="highScores">
+        <p id="finalScore">Highscore:</h1>        
+        <ul id="highScoreList"></ul>
+        <div class="btnHome"><i class="fas fa-home"></i> Home</div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
